@@ -10,17 +10,14 @@ import { ClienteService } from './services/client.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
     ClientListComponent,
     ClientFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
-  providers: [ClienteService],
-  bootstrap: [AppComponent]
+  providers: [ClienteService]
 })
 export class AppModule {}
