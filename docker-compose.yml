@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "4200:4200"
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:3000
+  api:
+    image: procardcli-api:latest
+    ports:
+      - "3000:3000"

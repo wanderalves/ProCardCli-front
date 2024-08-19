@@ -1,0 +1,28 @@
+<div>
+    <h2>{{ isEditMode ? 'Editar Cliente' : 'Novo Cliente' }}</h2>
+    <form (ngSubmit)="saveCliente()">
+      <label for="nome">Nome:</label>
+      <input id="nome" [(ngModel)]="cliente.nome" name="nome" required />
+  
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="cliente.email" name="email" required />
+  
+      <label for="telefone">Telefone:</label>
+      <input id="telefone" [(ngModel)]="cliente.telefone" name="telefone" required />
+  
+      <label for="endereco">Endereço:</label>
+      <input id="endereco" [(ngModel)]="cliente.endereco" name="endereco" required />
+  
+      <label for="cidade">Cidade:</label>
+      <input id="cidade" [(ngModel)]="cliente.cidade" name="cidade" required />
+  
+      <label for="estado">Estado:</label>
+      <input id="estado" [(ngModel)]="cliente.estado" name="estado" required />
+  
+      <label for="cep">CEP:</label>
+      <input id="cep" [(ngModel)]="cliente.cep" name="cep" required />
+  
+      <button type="submit">{{ isEditMode ? 'Atualizar' : 'Salvar' }}</button>
+    </form>
+  </div>
+  
